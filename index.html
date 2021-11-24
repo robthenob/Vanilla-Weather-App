@@ -15,8 +15,48 @@
   </head>
   <body>
     <div class="container">
-      <h1>Weather App</h1>
-      <a href="" class="btn btn-primary">Click me</a>
+      <div class="weatherContainer">
+        <div class="row">
+          <div class="col-6" id="temperature"><h1>23°C</h1></div>
+          <div class="col-6">
+            <ul>
+              <li>Currently: Clear</li>
+              <li>Wind: 1km/h</li>
+              <li>Humidity: 60%</li>
+            </ul>
+          </div>
+        </div>
+        <h2>Friday June 2, 2021</h2>
+        <h3>5 Day Forecast</h3>
+        <div class="row" id="nextFiveDays">
+          <div class="col">Sat</div>
+          <div class="col">Sat</div>
+          <div class="col">Sat</div>
+          <div class="col">Sat</div>
+          <div class="col">Sat</div>
+        </div>
+        <div class="row" id="nextFiveTemp">
+          <div class="col">21°C</div>
+          <div class="col">21°C</div>
+          <div class="col">21°C</div>
+          <div class="col">21°C</div>
+          <div class="col">21°C</div>
+        </div>
+        <h4 id="cityName">Bangkok, TH</h4>
+        <form>
+          <input
+            type="text"
+            id="search-bar"
+            placeholder="Search by city name..."
+          />
+          <button>Search</button>
+          <button>My Location</button>
+        </form>
+        <p>
+          <a href="#" target="_blank">Open source code</a> by Randi Bradley,
+          hosted on Netlify
+        </p>
+      </div>
     </div>
     <script src="src/index.js"></script>
   </body>
