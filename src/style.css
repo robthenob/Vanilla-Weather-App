@@ -18,8 +18,13 @@ body {
   border-radius: 15px;
   box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
 }
-#temperature h1 {
+#degree {
   font-size: 150px;
+}
+#unit {
+  font-size: 40px;
+  position: relative;
+  top: -75px;
 }
 ul {
   padding-top: 25px;
@@ -31,6 +36,10 @@ li {
   font-size: 20px;
   padding-left: 60px;
   padding-bottom: 10px;
+  text-transform: capitalize;
+}
+#km {
+  text-transform: lowercase;
 }
 h2 {
   padding-bottom: 40px;

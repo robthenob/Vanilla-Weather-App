@@ -19,16 +19,24 @@
     <div class="container">
       <div class="weatherContainer">
         <div class="row">
-          <div class="col-6" id="temperature"><h1>23°C</h1></div>
+          <div class="col-6" id="temperature">
+            <h1><span id="degree"></span> <span id="unit">°C</span></h1>
+          </div>
           <div class="col-6">
             <ul>
-              <li>Currently: Clear</li>
-              <li>Wind: 1km/h</li>
-              <li>Humidity: 60%</li>
+              <li id="currentCondition">Clear</li>
+              <li>
+                Wind: <span id="windSpeed"></span><span id="km">km/h</span>
+              </li>
+              <li>Humidity: <span id="humidity"></span>%</li>
             </ul>
           </div>
         </div>
-        <h2>Friday June 2, 2021</h2>
+        <h2>
+          <span id="currentDate">Friday June 2</span
+          ></br>
+          <span id="currentTime">6:00</span>
+        </h2>
         <h3>5 Day Forecast</h3>
         <div class="row" id="nextFiveDays">
           <div class="col">Sat</div>
