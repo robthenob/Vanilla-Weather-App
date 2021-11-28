@@ -9,7 +9,7 @@ body {
     rgb(166, 226, 229) 0%,
     rgb(198, 232, 221) 100.2%
   );
-  height: 750px;
+  height: 800px;
   max-width: 700px;
   padding: 25px;
   margin: 30px auto;
@@ -26,6 +26,7 @@ body {
   position: relative;
   top: -75px;
 }
+
 ul {
   padding-top: 25px;
 }

@@ -19,12 +19,13 @@
     <div class="container">
       <div class="weatherContainer">
         <div class="row">
-          <div class="col-6" id="temperature">
+          <div class="col-5" id="temperature">
             <h1><span id="degree"></span> <span id="unit">°C</span></h1>
           </div>
-          <div class="col-6">
+          <div class="col-2"><img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id= "icon"></div>
+          <div class="col-5">
             <ul>
-              <li id="currentCondition">Clear</li>
+              <li id="currentCondition"></li>
               <li>
                 Wind: <span id="windSpeed"></span><span id="km">km/h</span>
               </li>
@@ -36,6 +37,7 @@
           <span id="lastUpdated">Last Updated: </span> </br>
           <span id="currentDate"></span>
         </h2>
+        
         <h3>5 Day Forecast</h3>
         <div class="row" id="nextFiveDays">
           <div class="col">Sat</div>
@@ -51,7 +53,9 @@
           <div class="col">21°C</div>
           <div class="col">21°C</div>
         </div>
-        <h4 id="cityName">Bangkok, TH</h4>
+       
+       <h4 id="cityName">Bangkok, TH</h4>
+        
         <form>
           <input
             type="text"
