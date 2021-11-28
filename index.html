@@ -55,16 +55,22 @@
         </div>
        
        <h4 id="cityName">Bangkok, TH</h4>
-        
-        <form>
+    
+        <form id="searchForm">
+          <div class="row"><div class="col-6">
           <input
-            type="text"
+            type="search"
             id="search-bar"
             placeholder="Search by city name..."
+            autocomplete="off"
           />
-          <button id="searchButton">Search</button>
-          <button id="locationButton">Find Me</button>
+        </div>
+        <div class="col-3">
+          <button id="searchButton" type="submit" value="seach">Search</button></div>
+          <div class="col-3">
+          <button id="locationButton">Find Me</button></div>
         </form>
+      </div>
         <p>
           <a
             href="https://github.com/robthenob/Vanilla-Weather-App"
