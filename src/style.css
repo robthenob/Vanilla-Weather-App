@@ -28,6 +28,12 @@ body {
   position: relative;
   top: -75px;
 }
+#unit {
+  padding-left: 15px;
+}
+#unit.active {
+  color: white;
+}
 
 ul {
   padding-top: 25px;
@@ -59,7 +65,9 @@ h3 {
   font-size: 40px;
   text-align: center;
 }
-#cityName {
+#cityName,
+#country,
+h4 {
   font-size: 40px;
   padding-top: 40px;
 }
@@ -98,4 +106,12 @@ p {
   padding-top: 60px;
   text-align: center;
   opacity: 0.6;
+}
+#unit .active {
+  color: white;
+  cursor: default;
+  text-decoration: none;
+}
+#unit .active:hover {
+  text-decoration: none;
 }
