@@ -31,9 +31,6 @@ body {
 #unit {
   padding-left: 15px;
 }
-#unit.active {
-  color: white;
-}
 
 ul {
   padding-top: 25px;
@@ -107,11 +104,11 @@ p {
   text-align: center;
   opacity: 0.6;
 }
-#unit .active {
+h1 .active {
   color: white;
   cursor: default;
   text-decoration: none;
 }
-#unit .active:hover {
+h1 .active:hover {
   text-decoration: none;
 }

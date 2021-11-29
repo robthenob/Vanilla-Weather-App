@@ -22,7 +22,6 @@ function formatDate(timeStamp) {
 }
 
 function displayTemperature(response) {
-  console.log(response.data);
   celsiusTemperature = response.data.main.temp;
   let temperatureElement = document.querySelector("#degree");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -59,12 +58,17 @@ function handleSubmit(event) {
 
 function displayFahrenheitTemp(event) {
   event.preventDefault();
-  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
   let degreeElement = document.querySelector("#degree");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+
   degreeElement.innerHTML = Math.round(fahrenheitTemp);
 }
 function displayCelsiusTemp(event) {
   event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
   let celsiusElement = document.querySelector("#degree");
   celsiusElement.innerHTML = Math.round(celsiusTemperature);
 }
@@ -78,6 +82,6 @@ fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
 let celsiusLink = document.querySelector("#unit");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
-celciusTemperature = null;
+celsiusTemperature = null;
 
 search("Vancouver");
