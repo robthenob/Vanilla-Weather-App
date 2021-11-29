@@ -21,8 +21,10 @@ body {
 #degree {
   font-size: 150px;
 }
-#unit {
-  font-size: 40px;
+#unit,
+#bar,
+#fahrenheitUnit {
+  font-size: 30px;
   position: relative;
   top: -75px;
 }
@@ -35,7 +37,7 @@ li {
   list-style: none;
   display: block;
   font-size: 20px;
-  padding-left: 60px;
+  padding-left: 15px;
   padding-bottom: 10px;
   text-transform: capitalize;
 }
