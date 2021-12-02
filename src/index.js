@@ -20,6 +20,14 @@ function formatDate(timeStamp) {
   let day = days[date.getDay()];
   return `${day} ${hours}:${minutes}`;
 }
+
+function formatForecastDay(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  return days[day];
+}
+
 function getForecast(coordinates) {
   console.log(coordinates);
   let apiKey = "0b44bb10c5ed254a363948e06377120f";
@@ -53,20 +61,29 @@ function displayTemperature(response) {
 }
 function displayForecast(response) {
   console.log(response.data.daily);
+  let forecast = response.data.daily;
   let forecastElement = document.querySelector("#forecast");
   let forecastHTML = `<div class="row">`;
-  let days = ["Thu", "Fri", "Sat", "Sun"];
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `  
+
+  forecast.forEach(function (forecastDay, index) {
+    if (index < 6) {
+      forecastHTML =
+        forecastHTML +
+        `  
     <div class="col-2">
-      <div id="nextFiveDays">${day}</div>
-      <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" id= "littleIcon"/>
-      <div id="nextFiveTemp"><span class="forecastMax">21° </span><span class="forecastMin"><em>15°</em></span></div>
+      <div id="nextFiveDays">${formatForecastDay(forecastDay.dt)}</div>
+      <img src="http://openweathermap.org/img/wn/${
+        forecastDay.weather[0].icon
+      }@2x.png" alt="weather icon" id= "littleIcon"/>
+      <div id="nextFiveTemp"><span class="forecastMax">${Math.round(
+        forecastDay.temp.max
+      )} </span><span class="forecastMin"><em>${Math.round(
+          forecastDay.temp.min
+        )}</em></span></div>
       
     </div>
 `;
+    }
   });
 
   forecastHTML = forecastHTML + `</div>`;
